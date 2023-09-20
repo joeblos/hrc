@@ -21,9 +21,9 @@
 </script>
 
 <svelte:head>
-  <title>HRC Roofing</title>
+  <title>HRC Roofing | Call (409) 351-2930 For a FREE Quote!</title>
   <link rel="canonical" href="https://hrcroofing.co/"/>
-  <meta name="description" content="Projects by hrc roofing."/>
+  <meta name="description" content="Need a roof? We got you covered."/>
 
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website"/>
@@ -31,9 +31,9 @@
   <meta property="og:site_name" content="hrc roofing"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-  <meta property="og:title" content="Projects | hrc roofing"/>
-  <meta property="og:description" content="Projects by hrc roofing."/>
-  <meta property="og:image" content="https://www.hrcroofing.co/opengraph.png"/>
+  <meta property="og:title" content="HRC Roofing | Call (409) 351-2930 For a FREE Quote!"/>
+  <meta property="og:description" content="Need a roof? We got you covered."/>
+  <meta property="og:image" content="https://www.hrcroofing.co/og/og.png"/>
 </svelte:head>
 
 
