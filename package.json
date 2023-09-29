@@ -25,6 +25,7 @@
   "type": "module",
   "dependencies": {
     "@oneezy/ui": "^0.0.13",
+    "@splidejs/svelte-splide": "^0.2.9",
     "@unpic/svelte": "^0.0.30"
   }
 }

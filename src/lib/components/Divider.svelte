@@ -1,6 +1,6 @@
 <script>
   export let height;
-  export let color = 'fill-lite dark:fill-dark';
+  export let color = '';
   export let position = 'bottom';
   export let shape = '';
   export let flip = null;

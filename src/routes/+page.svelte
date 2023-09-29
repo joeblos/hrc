@@ -8,9 +8,9 @@
   
 	import Hero from '$lib/Hero.svelte'
 	// import TrustedBy from '$lib/TrustedBy.svelte'
-	import Features from '$lib/Features.svelte'
-	import Pricing from '$lib/Pricing.svelte'
-	import About from '$lib/About.svelte'
+	// import Features from '$lib/Features.svelte'
+	// import Pricing from '$lib/Pricing.svelte'
+	// import About from '$lib/About.svelte'
 	import FAQ from '$lib/FAQ.svelte'
 	// import Testimonials from '$lib/Testimonials.svelte'
 	import CTA from '$lib/CTA.svelte'
@@ -40,9 +40,9 @@
 
   
   <!-- <TrustedBy id="trustedby" /> -->
-  <Features id="features" />
-  <Pricing id="pricing" />
-  <About id="about" />
+  <!-- <Features id="features" /> -->
+  <!-- <Pricing id="pricing" /> -->
+  <!-- <About id="about" /> -->
   <FAQ id="faq" />
   <!-- <Testimonials id="testimonials" /> -->
   <CTA id="cta" />

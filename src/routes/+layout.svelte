@@ -1,20 +1,20 @@
 <script>
 	import { page } from '$app/stores'
   import { fade, fly } from 'svelte/transition';
-	import { Intro, Section, Scrollbar, Dialog, Theme, Button, Social, Icon, Copyright, Container, BG } from '@oneezy/ui'
+	import { Intro, Section, Scrollbar, Theme, Button, Social, Icon, Copyright, Container, BG } from '@oneezy/ui'
   import Header from '$lib/components/Header.svelte';
   import Logo from '$lib/Logo.svelte'
   import Nav from '$lib/components/Nav.svelte'
+  import Phone from '$lib/components/Phone.svelte'
+  import Dialog from '$lib/components/Dialog.svelte'
   import { md, lg } from '$lib/stores/mq';
-  // import { mq } from '$lib/stores/mq'
   import '@oneezy/ui/app.css'
   import "../app.postcss";
   
   let links = [
     { label: 'home',      href: `#home`},
-    { label: 'features',  href: `#features`},
-    { label: 'pricing',   href: `#pricing`},
-    { label: 'about',     href: `#about`},
+    { label: 'Residential',  href: `#residential`},
+    { label: 'Commercial',   href: `#commercial`},
     { label: 'FAQ',       href: `#faq`},
   ]
 
@@ -42,29 +42,48 @@
 {/if}
 
 <Header 
-  class="block px-4 py-6 md:pt-20 md:px-0" 
+  class="block px-6 py-10 md:pt-20 md:px-0" 
   header="h-10 md:h-20" 
-  bg="bg-yellow-400 -skew-x-[11deg]">
+  bg="bg-brand">
 
-  <Logo 
-    src="/logo.svg"
-    alt="HRC Roofing" 
-    slot="left" 
-    class="w-32 md:w-52"
-  />
-  
-  <svelte:fragment slot="center">
+  <svelte:fragment slot="left">
     {#if $md}
-      <Nav {links} class="lg:flex text-2xl font-semibold text-black" />
+      <Logo 
+        src="/logo.svg"
+        alt="HRC Roofing" 
+        slot="left" 
+        class="w-32 md:w-52 translate-x-[-20px] bg-black p-4 md:p-6"
+      />
     {/if}
-  </svelte:fragment>
 
-  <svelte:fragment slot="right" >
     {#if !$md}
       <Dialog type="nav" class="lg:hidden">
         <Nav {links} />
       </Dialog>
     {/if}
+  </svelte:fragment>
+
+  <svelte:fragment slot="center">
+    {#if !$md}
+      <Logo 
+        src="/logo.svg"
+        alt="HRC Roofing" 
+        slot="left" 
+        class="w-32 md:w-52 bg-black p-4 md:p-6"
+      />
+    {/if}
+
+    {#if $md}
+      <Nav {links} class="lg:flex text-2xl text-black font-mercenary font-medium" />
+    {/if}
+  </svelte:fragment>
+
+  <svelte:fragment slot="right">
+    <Phone 
+      link={"4093512930"} 
+      text={"409.351.2930"} 
+      class="h-8 md:min-h-full absolute md:relative right-0" 
+    />
   </svelte:fragment>
 
 </Header>
