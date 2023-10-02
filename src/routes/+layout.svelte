@@ -12,9 +12,9 @@
   import "../app.postcss";
   
   let links = [
-    { label: 'home',      href: `#home`},
-    { label: 'Residential',  href: `#residential`},
-    { label: 'Commercial',   href: `#commercial`},
+    { label: 'home',      href: `/`},
+    { label: 'Residential',  href: `residential-roofing`},
+    { label: 'Commercial',   href: `commercial-roofing`},
     { label: 'FAQ',       href: `#faq`},
   ]
 

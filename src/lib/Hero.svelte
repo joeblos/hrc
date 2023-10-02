@@ -1,15 +1,40 @@
 <script>
-  import { fly } from 'svelte/transition';
+  import { fly, fade } from 'svelte/transition';
   import { Section, Container, Content, Button, Card } from '@oneezy/ui';
   import Divider from '$lib/components/Divider.svelte';
   import Fader from '$lib/components/Fader.svelte';
 
-  let src = `/photos/residential/roof-1.png`;
+  let residential = [
+    "https://source.unsplash.com/featured/?roof,roofing1",
+    "https://source.unsplash.com/featured/?roof,roofing2",
+    "https://source.unsplash.com/featured/?roof,roofing3"
+  ];
+
+  let commercial = [
+    "https://source.unsplash.com/featured/?roof,roofing4",
+    "https://source.unsplash.com/featured/?roof,roofing5",
+    "https://source.unsplash.com/featured/?roof,roofing6"
+  ];
+
+  let activeFeature = "resdiental"; // default feature
+
+  function setActiveFeature(feature) {
+    activeFeature = feature;
+  }
 </script>
 
 <Section {...$$restProps} id="home" class="w-full relative active section--active h-screen overflow-hidden dark">
 
-  <Fader />
+  {#if activeFeature == 'resdiental'}
+  <Fader images={residential} />
+    <!-- <div transition:fade={{duration: 1000}}>
+    </div> -->
+  {:else if activeFeature == 'commercial'}
+  <Fader images={commercial} />
+    <!-- <div transition:fade={{duration: 1000}}>
+    </div> -->
+  {/if}
+
   <div class="bg-black/40 absolute inset-0 z-[-1]"></div>
 
   <Container class="h-full">
@@ -30,15 +55,23 @@
         <span class="uppercase">We got you <b class="text-brand">covered</b>.</span>
       </p>
       
-      <div class="flex">
-        <!-- <Card>test</Card>
-        <Card>test</Card> -->
-      </div>
+      <section class="relative z-1 flex gap-4">
+        <button 
+          id="residential" 
+          class="feature bg-yellow-400 p-4" 
+          tabindex="0"
+          on:mouseover={() => setActiveFeature('residential')}
+          on:focus={() => setActiveFeature('residential')}>Feature 1</button> 
+
+        <button 
+          id="commercial" 
+          class="feature bg-yellow-400 p-4" 
+          tabindex="0"
+          on:mouseover={() => setActiveFeature('commercial')}
+          on:focus={() => setActiveFeature('commercial')}>Feature 2</button>
+      </section>
         
-      <div in:fly="{{ y: 10, delay: 900, duration: 800 }}" class="flex flex-col justify-center lg:flex-row gap-4 prose-none">
-        <div in:fly="{{ y: 10, delay: 900, duration: 800 }}" class="w-full lg:w-64">
-          <Button href="/about" button="outline" display="hero" class="">Learn More</Button>
-        </div>
+      <div class="flex flex-col justify-center lg:flex-row gap-4 prose-none">
         <div class="w-full lg:w-64">
           <Button href="/quote" display="hero" style="background-color: rgb(254 189 23)">Get a Quote</Button>
         </div> 
