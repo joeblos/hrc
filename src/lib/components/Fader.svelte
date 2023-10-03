@@ -2,9 +2,9 @@
   import { onMount } from 'svelte';
 
   export let images = [
-		"https://source.unsplash.com/featured/?roof,roofing1",
-		"https://source.unsplash.com/featured/?roof,roofing2",
-		"https://source.unsplash.com/featured/?roof,roofing3"
+		"https://source.unsplash.com/featured/?man,roofing1",
+		"https://source.unsplash.com/featured/?man,roofing2",
+		"https://source.unsplash.com/featured/?man,roofing3"
   ];
 
   let currentIndex = 0;
@@ -26,7 +26,7 @@
       src="{image}" 
 			loading="lazy"
       alt="" 
-      class="absolute inset-0 w-full h-full object-fit object-cover transition-opacity duration-1000 
+      class="absolute inset-0 w-full h-full object-fit object-cover transition-opacity duration-1000
       {currentIndex === index ? 'opacity-100' : 'opacity-0'}" />
   {/each}
 </div>

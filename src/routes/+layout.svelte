@@ -7,6 +7,7 @@
   import Nav from '$lib/components/Nav.svelte'
   import Phone from '$lib/components/Phone.svelte'
   import Dialog from '$lib/components/Dialog.svelte'
+  import CTA from '$lib/CTA.svelte'
   import { md, lg } from '$lib/stores/mq';
   import '@oneezy/ui/app.css'
   import "../app.postcss";
@@ -16,6 +17,12 @@
     { label: 'Residential',  href: `residential-roofing`},
     { label: 'Commercial',   href: `commercial-roofing`},
     { label: 'FAQ',       href: `#faq`},
+  ]
+
+  let socials = [
+    { "id": "1", "view": "", "name": "facebook", "url": "https://www.facebook.com/asdf/" },
+    { "id": "2", "view": "", "name": "twitter", "url":  "https://twitter.com/BotScavenger" },
+    { "id": "3", "view": "", "name": "youtube", "url":  "https://www.youtube.com/channel/UCcJgoV7LHcx4OVsgzG2mHLw" }
   ]
 
 </script>
@@ -93,9 +100,12 @@
 
   <div class="min-h-screen w-full" in:fly="{{ y: 20, delay: 800, duration: 800 }}">
     <slot />
-    <footer class="container mx-auto p-4 lg:p-8">
-      <Social />
-      <Copyright>HRC Roofing</Copyright>
-    </footer>
   </div>
+  <CTA />
+  <footer class="bg-black text-white">
+    <Container>
+      <!-- <Social {...socials} class="fill-white"/> -->
+      <Copyright class="text-white">HRC Roofing</Copyright>
+    </Container>
+  </footer>
 </Intro>

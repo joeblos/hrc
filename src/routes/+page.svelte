@@ -13,7 +13,7 @@
 	// import About from '$lib/About.svelte'
 	import FAQ from '$lib/FAQ.svelte'
 	// import Testimonials from '$lib/Testimonials.svelte'
-	import CTA from '$lib/CTA.svelte'
+	// import CTA from '$lib/CTA.svelte'
 
 	export let data;
   const { products } = data
@@ -45,5 +45,5 @@
   <!-- <About id="about" /> -->
   <FAQ id="faq" />
   <!-- <Testimonials id="testimonials" /> -->
-  <CTA id="cta" />
+  <!-- <CTA id="cta" /> -->
 </App>
