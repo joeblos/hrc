@@ -1,8 +1,8 @@
 <script>
   import { Button } from '@oneezy/ui'
   import { md, lg } from '$lib/stores/mq';
-  export let link = "4093512930"
-  export let text = "409.351.2930"
+  export let link = "4094443343"
+  export let text = "409.444.3343"
 </script>
 
 <Button href="tel:{link}" class="text-black text-2xl" button="text">

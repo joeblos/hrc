@@ -28,7 +28,7 @@
 </script>
 
 <svelte:head>
-  <title>HRC Roofing | Call (409) 351-2930 For a FREE Quote!</title>
+  <title>HRC Roofing | Call (409) 444-3343 For a FREE Quote!</title>
   <link rel="canonical" href="https://hrcroofing.co/"/>
   <meta name="description" content="Need a roof? We got you covered."/>
 
@@ -38,7 +38,7 @@
   <meta property="og:site_name" content="hrc roofing"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-  <meta property="og:title" content="HRC Roofing | Call (409) 351-2930 For a FREE Quote!"/>
+  <meta property="og:title" content="HRC Roofing | Call (409) 444-3343 For a FREE Quote!"/>
   <meta property="og:description" content="Need a roof? We got you covered."/>
   <meta property="og:image" content="https://www.hrcroofing.co/og/og.png"/>
 </svelte:head>
@@ -81,14 +81,14 @@
     {/if}
 
     {#if $md}
-      <Nav {links} class="lg:flex text-2xl text-black font-mercenary font-medium" />
+      <Nav {links} class="lg:flex text-2xl text-black font-mercenary font-semibold" />
     {/if}
   </svelte:fragment>
 
   <svelte:fragment slot="right">
     <Phone 
-      link={"4093512930"} 
-      text={"409.351.2930"} 
+      link={"4094443343"} 
+      text={"409.444.3343"} 
       class="h-8 md:min-h-full absolute md:relative right-0" 
     />
   </svelte:fragment>
