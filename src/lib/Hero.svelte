@@ -48,22 +48,26 @@
     {
       "href": "https://www.bbb.org/us/tx/beaumont/profile/roofing-contractors/hrc-roofing-construction-0845-6001427",
       "src": "/companies/bbb.svg",
-      "alt": "Better Business Bureau A+ Rating"
+      "alt": "Better Business Bureau A+ Rating",
+      "order": "order-1"
     },
     {
       "href": "/",
       "src": "/companies/licensed-bonded-insured.svg",
-      "alt": "Licensed, Bonded, and Insured"
+      "alt": "Licensed, Bonded, and Insured",
+      "order": "order-2"
     },
     {
       "href": "/",
       "src": "/companies/texas.svg",
-      "alt": "Serving Southeast Texas"
+      "alt": "Serving Southeast Texas",
+      "order": "order-4"
     },
     {
       "href": "/",
       "src": "/companies/30-years.svg",
-      "alt": "30 Years of Business"
+      "alt": "30 Years of Business",
+      "order": "order-5"
     }
   ];
 
@@ -75,7 +79,7 @@
 <Section {...$$restProps} id="home" class="w-full relative z-0 active section--active h-screen overflow-hidden dark">
 
   <Container class="h-full relative z-10" style="translate: 0 {-y / 10}px; transition: .22s ease;">
-    <Content class="h-full mx-auto flex flex-col items-center justify-center pt-[15vh] pb-[10vh] gap-10 select-none text--primary">
+    <Content class="h-full mx-auto flex flex-col items-center justify-center pt-[25vh] pb-[10vh] gap-16 select-none text--primary">
       <h1 class="sr-only">HRC Roofing</h1>
       
       <!-- TAGLINE 
@@ -104,34 +108,34 @@
             on:focus={() => setActiveFeature(roofing.id)}>
 
             <!-- Icon -->
-            <img src={roofing.icon} class="max-w-full md:h-56" alt={roofing.alt} />
+            <img src={roofing.icon} class="max-w-full md:h-42" alt={roofing.alt} />
             <!-- Service -->
             <h3 class="font-mercenary font-bold uppercase text-normal md:text-[2.5vh]">{roofing.label}</h3>
           </a>
         {/each}
       </section>
       
-      <!-- BUTTON 
-      ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-      <Button 
-        href="tel:4094443343" 
-        display="hero" 
-        style="background-color: rgba(var(--color-brand));"
-        class="text-[2.5vh] font-mercenary font-black uppercase py-10
-          dark:bg-brand 
-          dark:hover:bg-brand 
-          dark:border-brand
-          dark:text-black 
-          dark:hover:text-black">
-          Get a Free Quote
-      </Button>
-      
-      
       <!-- AWARDS 
       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
       <section class="z-50 flex items-center justify-center gap-8">
+        
+        <!-- BUTTON -->
+        <Button 
+          href="tel:4094443343" 
+          display="hero" 
+          style="background-color: rgba(var(--color-brand));"
+          class="order-3 text-[2.5vh] font-mercenary font-black uppercase py-10
+            dark:bg-brand 
+            dark:hover:bg-brand 
+            dark:border-brand
+            dark:text-black 
+            dark:hover:text-black">
+            Get a Free Quote
+        </Button>
+      
+        <!-- AWARDS -->
         {#each awards as award}
-          <a href={award.href} tabindex="0" class="w-48 lg:w-40 flex items-center justify-center">
+          <a href={award.href} tabindex="0" class="w-48 lg:w-40 hidden lg:flex items-center justify-center {award.order}">
             <img 
               src={award.src}
               alt={award.alt}
@@ -139,6 +143,7 @@
             />
           </a>
         {/each}
+        
       </section>
     </Content>
   </Container>
