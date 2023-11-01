@@ -6,7 +6,7 @@
 	<Container>
 		<Title>Ready to get started?</Title>
 		<Button
-			href="tel:4094443343"
+			href="tel:4094443433"
 			display="hero"
 			button="filled"
 			class="mx-auto max-w-sm"
