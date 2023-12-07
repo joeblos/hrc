@@ -105,6 +105,7 @@
   <footer class="bg-black text-white">
     <Container>
       <!-- <Social {...socials} class="fill-white"/> -->
+      <!-- <span>Call 409.444.3433</span> -->
       <Copyright class="text-white">HRC Roofing</Copyright>
     </Container>
   </footer>
