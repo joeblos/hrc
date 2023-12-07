@@ -28,7 +28,7 @@
 </script>
 
 <svelte:head>
-  <title>HRC Roofing | Call (409) 444-3433 For a FREE Quote Today!</title>
+  <title>HRC Roofing | Call (409) 444-3433 For a FREE Quote!</title>
   <link rel="canonical" href="https://hrcroofing.co/"/>
   <meta name="description" content="Need a roof? We got you covered."/>
 
